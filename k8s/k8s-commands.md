@@ -10,7 +10,7 @@ kubectl rollout restart deployment <deployment-name>
 ```bash
 kubectl logs -f <pod-name>
 ```
-x
+
 ## See all Pods 
 ```bash
 kubectl get pods
