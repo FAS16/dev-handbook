@@ -5,18 +5,18 @@
 kubectl rollout restart deployment <deployment-name>
 ```
 
-## See Pod logs 
+## Get Pod logs 
 (remove -f to not follow)
 ```bash
 kubectl logs -f <pod-name>
 ```
 
-## See all Pods 
+## Get all Pods 
 ```bash
 kubectl get pods
 ```
 
-## See all Deployments
+## Get all Deployments
 ```bash
 kubectl get deployments
 ```
@@ -41,6 +41,12 @@ kubectl get configmaps
 (N=Number of pods, 0 is effectively stopping the application entirely)
 ```bash
 kubectl scale deployment <deployment-name> --replicas=N
+```
+
+## Get and decode Secret
+This command retrieves the Kubernetes secret in JSON format, decodes each base64-encoded value within its .data field using jq, and outputs the result as a readable JSON object.
+```bash
+kubectl get secret <secret-name> -o json | jq '.data | map_values(@base64d)'
 ```
 
 ## Template
