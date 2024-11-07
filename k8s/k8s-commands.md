@@ -1,6 +1,6 @@
 # K8s Commands Cheat Sheet
 
-## Restart Pod Manually
+## Restart Deployment/Pod Manually
 ```bash
 kubectl rollout restart deployment <deployment-name>
 ```
@@ -33,6 +33,7 @@ kubectl edit configmap <config-map-name>
 ```
 
 ## Edit ConfigMaps
+Use this to e.g. edit a configuration and then restart the deployment with the command above.
 ```bash
 kubectl get configmaps
 ```
