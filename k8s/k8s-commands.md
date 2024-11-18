@@ -12,9 +12,20 @@ kubectl logs -f <pod-name>
 ```
 
 ## Get all Pods 
+Use cases:
+1. This will show you all pods in general.
+2. Also shows this information READY, STATUS, RESTARTS, AGE
 ```bash
 kubectl get pods
 ```
+
+
+## "Describe" a pod
+Provides detailed information about the pod's configuration, status, events, and lifecycle, including reasons for failures or restarts.
+```bash
+kubectl describe pod <pod-name>
+```
+
 
 ## Get all Deployments
 ```bash
